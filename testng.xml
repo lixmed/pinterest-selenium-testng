@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Pinterest Automation Suite" verbose="1" parallel="classes" thread-count="6">
+
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                    <include name="testInvalidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Search Tests">
+        <classes>
+            <class name="tests.SearchTests">
+                <methods>
+                    <include name="testBasicSearch"/>
+                    <include name="testInfiniteScroll"/>
+                    <include name="testClearSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Pin Interaction Tests">
+        <classes>
+            <class name="tests.PinInteractionTests">
+                <methods>
+                    <include name="testPinHover"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Navigation Tests">
+        <classes>
+            <class name="tests.NavigationTests">
+                <methods>
+                    <include name="testNavigationBack"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Logout Tests">
+        <classes>
+            <class name="tests.LogoutTests">
+                <methods>
+                    <include name="testLogoutFlow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
